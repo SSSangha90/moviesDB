@@ -1,0 +1,34 @@
+﻿@model MvcMoviesJuly2018.Models.Movie
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <h4>Movie</h4>
+    @Html.ValidationSummary();
+
+    @Html.LabelFor(m => m.Title)
+    @Html.EditorFor(m => m.Title)
+
+    @Html.LabelFor(m => m.ReleaseDate)
+    @Html.EditorFor(m => m.ReleaseDate)
+
+    @Html.LabelFor(m => m.Genre)
+    @Html.EditorFor(m => m.Genre)
+
+    @Html.LabelFor(m => m.Price)
+    @Html.EditorFor(m => m.Price)
+
+    @Html.LabelFor(m => m.ImageURL)
+    @Html.EditorFor(m => m.ImageURL)
+
+    <input type="submit" value="Save Changes" />
+
+}
+
+@Html.ActionLink("Back to List", "Index")

@@ -1,0 +1,30 @@
+﻿@model MvcMoviesJuly2018.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<dl>
+    <dt>@Html.DisplayNameFor(m => m.Title)</dt>
+    <dd>@Html.DisplayFor(m => m.Title)</dd>
+
+    <dt>@Html.DisplayNameFor(m => m.ReleaseDate)</dt>
+    <dd>@Html.DisplayFor(m => m.ReleaseDate)</dd>
+
+    <dt>@Html.DisplayNameFor(m => m.Genre)</dt>
+    <dd>@Html.DisplayFor(m => m.Genre)</dd>
+
+    <dt>@Html.DisplayNameFor(m => m.Price)</dt>
+    <dd>@Html.DisplayFor(m => m.Price)</dd>
+
+    <dt>@Html.DisplayNameFor(m => m.ImageURL)</dt>
+    <dd>@Html.DisplayFor(m => m.ImageURL)</dd>
+</dl>
+
+<p>
+    @Html.ActionLink("Edit Record", "Edit", new { id = Model.Id}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
